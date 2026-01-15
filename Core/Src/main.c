@@ -129,7 +129,7 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-    int przemo = 1232;
+    int przemo = 32323;
     char srak = 'z';
 
     HAL_Delay(2000);
