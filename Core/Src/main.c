@@ -129,6 +129,8 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+    int przemo = 1;
+
     HAL_Delay(2000);
     inc++;
     uint8_t data[8];
