@@ -130,7 +130,7 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
     int przemo = 32323;
-    char srak = 'z';
+    char kupa = 'z';
 
     HAL_Delay(2000);
     inc++;
