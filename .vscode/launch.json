@@ -1,0 +1,27 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug",
+            "cwd": "${workspaceFolder}",
+            "executable": "./build/CanProject.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "runToEntryPoint": null,
+            "servertype": "openocd",
+            "device": "STM32L476RG",
+            "configFiles": [
+                "interface/stlink.cfg",
+                "target/stm32l4x.cfg"
+            ],
+            "interface": "swd",
+            "postLaunchCommands": [
+                "monitor reset halt",
+                "monitor halt"
+            ],
+            "preLaunchTask": "Make",
+            "svdFile": "${workspaceFolder}/STM32L476.svd",
+            "showDevDebugOutput": true
+        }
+    ]
+}

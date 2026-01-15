@@ -1,0 +1,18 @@
+{
+    "C_Cpp.intelliSenseEngine": "Default",
+    "C_Cpp.default.configurationProvider": null,
+    "files.associations": {
+        "*.c": "c",
+        "*.h": "c",
+        "stm32l4xx_hal_conf.h": "c",
+        "stm32l4xx_hal.h": "c",
+        "main.h": "c",
+        "compare": "c"
+    },
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.vscode": false
+    }
+}

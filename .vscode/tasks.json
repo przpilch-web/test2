@@ -1,0 +1,69 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Make",
+            "type": "shell",
+            "command": "make",
+            "args": ["-j11"],
+            "options": {
+                "cwd": "D:/STM32_Project/przemo/test2",
+                "shell": {
+                    "executable": "C:/Program Files/Git/bin/bash.exe",
+                    "args": ["-c"]
+                }
+            },
+            "problemMatcher": [],
+            "detail": "Runs make -j11 in the specified directory using Bash."
+        },
+        {
+            "label": "Clean",
+            "type": "shell",
+            "command": "make",
+            "args": ["clean"],
+            "options": {
+                "cwd": "D:/STM32_Project/przemo/test2",
+                "shell": {
+                    "executable": "C:/Program Files/Git/bin/bash.exe",
+                    "args": ["-c"]
+                }
+            },
+            "problemMatcher": [],
+            "detail": "Runs make -j11 in the specified directory using Bash."
+        },
+        {
+            "label": "Flash",
+            "type": "shell",
+            "command": "openocd",
+            "args": [
+                "-f", "interface/stlink.cfg",
+                "-f", "target/stm32l4x.cfg",
+                "-c", "program ./build/CanProject.elf verify reset exit"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [],
+            "detail": "Task for flashing STM32 microcontroller using OpenOCD."
+        },
+        {
+            "label": "Console",
+            "type": "shell",
+            "command": "C:/Users/1/AppData/Local/Programs/Python/Python313/python.exe",
+            "args": [
+                "D:/STM32_Project/CanProject/DCon/Tools/Console.py"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            }
+        }
+    ]
+}
